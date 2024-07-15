@@ -1,0 +1,22 @@
+1.URI 
+  -. URI 안에 URL(Locator), URN(Name)이 있다.
+
+2. URL URI와 거의 같다.
+  -. https://www.google.com/search?q=hello&hi=ko
+  -. 문법 >> scheme://[userinfo@]host[:prot][/path][?query][#fragment]
+    -  스키마 : 주로 프로토콜에 사용 (http, https, ftp) 어떤식으로 자원에 접근할 것인가? 하는 약속 규칙
+    
+    -. http는 보통 80 포트이고, https는 보통 443포트이다. (http 와 https를 사용할경우 보통 80, 443포트로 사용되어 보통 포트는 생략가능하다.)
+    
+    -. userinfo@는 거의 사용되지 않고있음(사용하는 사용자정보 였음)
+
+    -. host는 도메인명, IP주소, 호스트명
+
+    -. :Port는 접속포트를 말하며 일반적으로 생략, 생략시 http는 80, https는 443 사용
+
+    -. /path 는 리소스 경로 , 계층적 구조 
+
+    -. ?query 는 key=value 형태 
+
+    -. #fragment는 잘 사용되지 않지만 서버에 전송되는 정보는 아니다.
+   
