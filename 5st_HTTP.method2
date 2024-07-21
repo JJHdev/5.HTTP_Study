@@ -26,11 +26,35 @@
     -. PUT 기반 등록
     -. ex) 정적 컨텐츠 관리, 원격 파일 관리
 
-  -. HTTP FORM 사용
+  -. HTTP FORM 사용       - 컨트롤 URL
     -. 웹페이지 회원관리
     -. GET, POST만 지원
 
+----------------------------------------------------------------
 
+  -. 회원목록 members        -> GET
+  -. 회원등록 members        -> POST
+  -. 회원조회 members/{id}   -> GET
+  -. 회원수정 members/{id}  -> PATCH,PUT,POST
+  -. 회원삭제 members/{id}  -> DELETE
 
+  -. 파일목록       files                -> GET
+  -. 파일조회       files/{filename}     -> GET
+  -. 파일등록       files/{filename}     -> PUT
+  -. 파일삭제       files/{filename}     -> DELETE
+  -. 파일 대량등록  files/{filename}      -> POST
 
+  -. 회원 목록      /members                                     -> GET
+  -. 회원등록 폼    /members/new                                 -> GET
+  -. 회원 등록      /members/new , /members                      -> POST
+  -. 회원조회       /members/{id}                                -> GET
+  -. 회원 수정폼    /members/{id}/edit                           -> GET
+  -. 회원 수정      /members/{id}/edit , /members/{id}           -> POST
+  -. 회원 삭제      /members/{id}/delete                         -> POST
+
+  -> 최대한 리소스란 개념을 가지고 살려야 하고, 정 안될때 컨트롤 URL를 활용해야한다.
+  -> 참고하면 좋은 URL 설계 개념
+      -> https://restfulapi.net/resource-naming
+  -> 거의 대부분 컬렉션 스타일의 URI로 설계하는게 대부분일것이다.
+  
 
